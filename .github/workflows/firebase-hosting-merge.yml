@@ -14,8 +14,11 @@ jobs:
       - run: npm ci && npm run build
       
       - uses: FirebaseExtended/action-hosting-deploy@v0
+        id: deploy
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_FARMATODO_GITHUB }}
           channelId: live
           projectId: farmatodo-github
+      - name: Show hosting URL
+        run: echo "App deployed to ${{ steps.deploy.outputs.hosting_url }}"
