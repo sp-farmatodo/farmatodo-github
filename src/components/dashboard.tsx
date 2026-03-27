@@ -192,7 +192,7 @@ export function Dashboard() {
           <CardHeader className="pb-2 flex-row items-center gap-2 space-y-0">
             <Package className="h-4 w-4 text-muted-foreground shrink-0" />
             <CardTitle className="text-xs font-medium text-muted-foreground">
-              Total Productos
+              Total Productossssss
             </CardTitle>
           </CardHeader>
           <CardContent>
