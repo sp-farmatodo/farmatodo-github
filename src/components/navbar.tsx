@@ -15,13 +15,13 @@ export function Navbar() {
         </div>
         <nav className="hidden sm:flex items-center gap-6 text-sm font-medium">
           <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-            Inicio
+            Dashboard
           </a>
           <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-            Productos
+            Estadisticas
           </a>
           <a href="#" className="opacity-90 hover:opacity-100 transition-opacity">
-            Contacto
+            Usuarios
           </a>
         </nav>
       </div>
