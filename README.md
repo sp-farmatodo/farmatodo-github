@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Farmatodo - Catálogo de Productos
 
-## Getting Started
+Proyecto de práctica para el **Curso de GitHub Colaborativo** de Farmatodo.
 
-First, run the development server:
+Este proyecto es un catálogo de productos construido con **Next.js** y **shadcn/ui**, diseñado para aprender a trabajar en equipo usando GitHub.
+
+---
+
+## Tecnologías utilizadas
+
+- [Next.js 15](https://nextjs.org/) – Framework de React
+- [shadcn/ui](https://ui.shadcn.com/) – Componentes de UI
+- [Tailwind CSS](https://tailwindcss.com/) – Estilos
+- [TypeScript](https://www.typescriptlang.org/) – Tipado estático
+
+---
+
+## Cómo correr el proyecto
+
+### 1. Clonar el repositorio
+
+```bash
+git clone <url-del-repositorio>
+cd farmatodo-github
+```
+
+### 2. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 3. Iniciar el servidor de desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Estructura del proyecto
 
-## Learn More
+```
+src/
+├── app/
+│   ├── layout.tsx       # Layout principal
+│   ├── page.tsx         # Página de inicio
+│   └── globals.css      # Estilos globales
+├── components/
+│   ├── ui/              # Componentes de shadcn/ui
+│   ├── navbar.tsx       # Barra de navegación
+│   ├── product-card.tsx # Tarjeta de producto
+│   └── catalog.tsx      # Catálogo con filtros
+└── lib/
+    ├── data.ts          # Datos de productos
+    ├── types.ts         # Tipos de TypeScript
+    └── utils.ts         # Utilidades
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Ejercicios del curso
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+A continuación, algunas tareas que puedes practicar en equipo:
 
-## Deploy on Vercel
+1. **Agregar un nuevo producto** – Edita `src/lib/data.ts` y agrega un producto nuevo al arreglo.
+2. **Cambiar el estilo de un componente** – Modifica los colores o el diseño de `product-card.tsx`.
+3. **Agregar una nueva categoría** – Añade una nueva categoría en `types.ts` y `data.ts`.
+4. **Crear una nueva página** – Agrega una página `/about` con información del equipo.
+5. **Corregir un bug** – Busca un error intencional y corrígelo en una rama separada.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Flujo de trabajo con Git
+
+```bash
+# Crear una rama para tu tarea
+git checkout -b feature/agregar-producto
+
+# Hacer tus cambios y confirmarlos
+git add .
+git commit -m "feat: agregar producto vitamina E"
+
+# Subir tu rama
+git push origin feature/agregar-producto
+
+# Crear un Pull Request en GitHub
+```
+
+---
+
+## Convenciones de commits
+
+Usamos [Conventional Commits](https://www.conventionalcommits.org/):
+
+| Prefijo    | Uso                                   |
+|------------|---------------------------------------|
+| `feat:`    | Nueva funcionalidad                   |
+| `fix:`     | Corrección de errores                 |
+| `style:`   | Cambios de estilos (sin lógica)       |
+| `docs:`    | Cambios en documentación              |
+| `refactor:`| Refactorización de código             |
+
+---
+
+Hecho con para el equipo de Farmatodo.
